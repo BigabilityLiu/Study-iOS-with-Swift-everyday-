@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_51028_UIDatePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ogr-OH-D41"/>
+                        <viewControllerLayoutGuide type="bottom" id="Apr-tI-8Ig"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gck-G5-wjc">
+                                <rect key="frame" x="231" y="308" width="137" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="SGO-ce-bf2"/>
+                                    <constraint firstAttribute="height" constant="21" id="r9l-lJ-hbT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ome-iF-Sds">
+                                <rect key="frame" x="140" y="20" width="320" height="216"/>
+                                <animations/>
+                                <date key="date" timeIntervalSinceReferenceDate="467736317.70453602">
+                                    <!--2015-10-28 14:45:17 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHy-Zm-aXR">
+                                <rect key="frame" x="233" y="452" width="135" height="30"/>
+                                <animations/>
+                                <state key="normal" title="点我就可以显示时间"/>
+                                <connections>
+                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ubq-Zi-Md0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gck-G5-wjc" firstAttribute="trailing" secondItem="VHy-Zm-aXR" secondAttribute="trailing" id="1kH-iS-pd7"/>
+                            <constraint firstAttribute="bottom" secondItem="Gck-G5-wjc" secondAttribute="bottom" constant="271" id="8aM-Rm-cbB"/>
+                            <constraint firstItem="Apr-tI-8Ig" firstAttribute="top" secondItem="VHy-Zm-aXR" secondAttribute="bottom" constant="118" id="K1K-MU-dQV"/>
+                            <constraint firstItem="Gck-G5-wjc" firstAttribute="centerX" secondItem="Ome-iF-Sds" secondAttribute="centerX" id="NR2-LP-9qh"/>
+                            <constraint firstItem="Gck-G5-wjc" firstAttribute="top" secondItem="Ome-iF-Sds" secondAttribute="bottom" constant="72" id="UAt-z6-4tl"/>
+                            <constraint firstItem="Ome-iF-Sds" firstAttribute="top" secondItem="Ogr-OH-D41" secondAttribute="bottom" id="aoc-gL-II9"/>
+                            <constraint firstItem="Gck-G5-wjc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jTU-zl-NRf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xr1-Hs-tj6"/>
+                    <connections>
+                        <outlet property="datePicker" destination="Ome-iF-Sds" id="R80-oD-wcc"/>
+                        <outlet property="label" destination="Gck-G5-wjc" id="dAT-0y-CZo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798" y="173"/>
+        </scene>
+    </scenes>
+</document>
