@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hKC-yv-1dL">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--省列表-->
+        <scene sceneID="PqQ-xi-Cwp">
+            <objects>
+                <tableViewController title="省列表" id="ZWn-m3-a1z" customClass="TableViewController" customModule="_51108TreeNavigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="yZc-Oq-WzL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CellIdentifier" id="uZb-b4-Hje">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uZb-b4-Hje" id="D0h-F3-KW7">
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <segue destination="joj-7d-qZi" kind="show" identifier="ShowSelectedProvince" id="Jxd-s3-SEY"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ZWn-m3-a1z" id="E7g-RW-nI4"/>
+                            <outlet property="delegate" destination="ZWn-m3-a1z" id="drB-Mp-tCa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="VrY-fc-NtM"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LDL-kL-h4Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="496" y="701"/>
+        </scene>
+        <!--市列表-->
+        <scene sceneID="sgM-D2-WNc">
+            <objects>
+                <tableViewController title="市列表" id="joj-7d-qZi" customClass="CitiesViewController" customModule="_51108TreeNavigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6Kg-gy-VSx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CitiesCellIdentifier" id="BdQ-lC-4cD">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BdQ-lC-4cD" id="U2n-r3-nh3">
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <segue destination="3TO-hZ-TFU" kind="show" identifier="ShowSelectedCity" id="zZV-0u-TsI"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="joj-7d-qZi" id="bbZ-Nw-DYe"/>
+                            <outlet property="delegate" destination="joj-7d-qZi" id="7BE-EY-IHM"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vah-zh-xlr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1238" y="698"/>
+        </scene>
+        <!--市详情-->
+        <scene sceneID="6Rq-n4-8u5">
+            <objects>
+                <viewController title="市详情" id="3TO-hZ-TFU" customClass="DetailViewController" customModule="_51108TreeNavigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gux-2b-MjB"/>
+                        <viewControllerLayoutGuide type="bottom" id="I4R-0Y-uAv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rQh-TK-B8r">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYT-Nk-Ba6">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="600" id="eVC-Ae-OPe"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fYT-Nk-Ba6" firstAttribute="top" secondItem="gux-2b-MjB" secondAttribute="bottom" constant="-64" id="dKV-rv-xCx"/>
+                            <constraint firstAttribute="trailing" secondItem="fYT-Nk-Ba6" secondAttribute="trailing" id="hLA-d1-zeY"/>
+                            <constraint firstItem="fYT-Nk-Ba6" firstAttribute="leading" secondItem="rQh-TK-B8r" secondAttribute="leading" id="lfr-8O-XKx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webview" destination="fYT-Nk-Ba6" id="6BS-br-jxl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MF1-jQ-hLa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1978" y="701"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4v6-L1-0Qb">
+            <objects>
+                <navigationController id="hKC-yv-1dL" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KWK-Gp-h51">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ZWn-m3-a1z" kind="relationship" relationship="rootViewController" id="RmN-de-hPh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HpM-5M-X0Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-274" y="701"/>
+        </scene>
+    </scenes>
+</document>
