@@ -10,24 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var display: UILabel!
-    var userIsInTheMiddleOfTypingANumber = false
-    var opperandStack:Array<Double> = []//或者 =Array<Double>()
-    @IBAction func appendDigit(sender: UIButton) {
-        let digit = sender.currentTitle!
-        
-        if userIsInTheMiddleOfTypingANumber{
-            display.text = display.text! + digit
-        }else{
-            display.text = digit
-            userIsInTheMiddleOfTypingANumber = true
-        }
-    }
-
-    @IBAction func enter() {
-        userIsInTheMiddleOfTypingANumber = false
-        opperandStack.append(displayValue)
-        print("operandStack = \(opperandStack)")
-    }
+    var userIsInTheMiddleOfTypingANumber = false//判断是否是输入数字
+    var brain = CalculatorBrain()
+    var opperandStack:Array<Double> = []//或者 =Array<Double>()，声明一个double类型的数组
+    
+    //结果显示器
     var displayValue:Double{
         get{
             return NSNumberFormatter().numberFromString(display.text!)!.doubleValue
@@ -37,37 +24,40 @@ class ViewController: UIViewController {
             userIsInTheMiddleOfTypingANumber = false
         }
     }
+    //点击数字button时候
+    @IBAction func appendDigit(sender: UIButton) {
+        let digit = sender.currentTitle!
+        if userIsInTheMiddleOfTypingANumber{
+            display.text = display.text! + digit
+        }else{
+            display.text = digit
+            userIsInTheMiddleOfTypingANumber = true
+        }
+    }
+    //点击enter键时
+    @IBAction func enter() {
+        userIsInTheMiddleOfTypingANumber = false
+        if let result = brain.pushOperand(displayValue){
+            displayValue = result
+        }else{
+            displayValue = 0
+        }
+    }
+    //点击运算符button时
     @IBAction func operate(sender: UIButton) {
-        let operation = sender.currentTitle!
-        switch operation{
-        case "＋":performOperation {$0 + $1}
-        case "−":performOperation  {$1 - $0}
-        case "×":performOperation {$0 * $1}
-        case "÷":performOperation {$1 / $0}
-        case "√":performOperation2{sqrt($0)}
-        default:break
-        }
-    }
-    func performOperation(operation:(Double,Double)->Double){
-        if opperandStack.count >= 2{
-            displayValue = operation(opperandStack.removeLast(),opperandStack.removeLast())
+        if userIsInTheMiddleOfTypingANumber{
             enter()
         }
-    }
-    func performOperation2(operation: Double -> Double){
-        if opperandStack.count >= 1{
-            displayValue = operation(opperandStack.removeLast())
-            enter()
+        if let operation = sender.currentTitle{
+            if let result = brain.performOperation(operation){
+                displayValue = result
+            }else{
+                displayValue = 0
+            }
         }
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-
+    
 }
 
