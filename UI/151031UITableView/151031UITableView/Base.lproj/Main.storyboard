@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3v8-Sp-cV0">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="R6G-8f-V4e">
+            <objects>
+                <tableViewController id="3v8-Sp-cV0" customClass="TableViewController" customModule="_51031UITableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="84" sectionHeaderHeight="28" sectionFooterHeight="28" id="ygk-C7-Ywl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="搜索更多大冶人物" showsScopeBar="YES" id="VkZ-nc-7EM">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="88"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <textInputTraits key="textInputTraits"/>
+                            <scopeButtonTitles>
+                                <string>name</string>
+                                <string>image</string>
+                            </scopeButtonTitles>
+                            <connections>
+                                <outlet property="delegate" destination="ygk-C7-Ywl" id="yQJ-kY-sKF"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellIdentifier" rowHeight="84" id="tIu-SJ-abO" customClass="TableViewCell" customModule="_51031UITableView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="600" height="84"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tIu-SJ-abO" id="Rsz-QY-zIk">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="83.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p0n-bC-7Od">
+                                            <rect key="frame" x="8" y="22" width="40" height="40"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="P3c-fg-Eaz"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEj-4V-MHi">
+                                            <rect key="frame" x="56" y="31" width="536" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstItem="p0n-bC-7Od" firstAttribute="leading" secondItem="Rsz-QY-zIk" secondAttribute="leadingMargin" id="Bbe-Hf-hVp"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="LEj-4V-MHi" secondAttribute="trailing" id="CSO-ch-Pim"/>
+                                        <constraint firstItem="LEj-4V-MHi" firstAttribute="top" secondItem="Rsz-QY-zIk" secondAttribute="topMargin" constant="23" id="ZUh-RO-MKM"/>
+                                        <constraint firstItem="p0n-bC-7Od" firstAttribute="top" secondItem="Rsz-QY-zIk" secondAttribute="topMargin" constant="14" id="dH9-XK-omX"/>
+                                        <constraint firstItem="LEj-4V-MHi" firstAttribute="centerY" secondItem="p0n-bC-7Od" secondAttribute="centerY" constant="-0.5" id="lp8-Dm-A0V"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="p0n-bC-7Od" secondAttribute="bottom" constant="14" id="wRN-LR-jE3"/>
+                                        <constraint firstItem="LEj-4V-MHi" firstAttribute="leading" secondItem="p0n-bC-7Od" secondAttribute="trailing" constant="8" id="x85-tT-fKO"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="myImage" destination="p0n-bC-7Od" id="L5f-3Q-x1q"/>
+                                    <outlet property="myLabel" destination="LEj-4V-MHi" id="78K-hY-qUc"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3v8-Sp-cV0" id="6ov-It-FmT"/>
+                            <outlet property="delegate" destination="3v8-Sp-cV0" id="cqK-H5-98d"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="searBar" destination="VkZ-nc-7EM" id="zHd-3B-KYe"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kbe-Nq-Jai" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="394" y="158"/>
+        </scene>
+    </scenes>
+</document>

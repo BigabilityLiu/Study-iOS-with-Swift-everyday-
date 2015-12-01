@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>小明：今天又修了一天💻</string>
+		<key>image</key>
+		<string>1.jpg</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>全：信不信我打死你</string>
+		<key>image</key>
+		<string>2.png</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>小志：我不太想理你</string>
+		<key>image</key>
+		<string>3.hpg</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>XX:那个头发最短的，你站起来说一下</string>
+		<key>image</key>
+		<string>4.jpg</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>万萌：凡哥快点，11:56了，中午有鸡腿</string>
+		<key>image</key>
+		<string>5.jpg</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>黄师傅：你够了我做的商场还不够好吗？</string>
+		<key>image</key>
+		<string>6.jpg</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>XX：我们是大公司，不是小企业</string>
+		<key>image</key>
+		<string>7.png</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>小威：他们怎么还不走，我先走了</string>
+		<key>image</key>
+		<string>8.jpg</string>
+	</dict>
+</array>
+</plist>
