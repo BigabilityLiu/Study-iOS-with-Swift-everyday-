@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="D6A-6c-CMM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="D6A-6c-CMM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
     </dependencies>
     <scenes>
         <!--Bow ties!-->
@@ -78,7 +78,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Last worn: 06/25/14" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wb-kG-ySj">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last worn: 06/25/14" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wb-kG-ySj">
                                 <rect key="frame" x="20" y="353" width="154" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -92,7 +92,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="*Favorite*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ6-Gf-DxM">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Favorite*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ6-Gf-DxM">
                                 <rect key="frame" x="20" y="382" width="78" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -104,6 +104,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SIf-2w-giR" firstAttribute="leading" secondItem="1W5-kt-XY7" secondAttribute="leading" constant="20" id="4Jz-4Q-7K6"/>
+                            <constraint firstItem="C4y-Om-Ol4" firstAttribute="top" secondItem="k8l-xk-cLX" secondAttribute="bottom" constant="50" id="7ff-GU-hCP"/>
                             <constraint firstItem="EnR-I9-dEq" firstAttribute="leading" secondItem="1W5-kt-XY7" secondAttribute="leading" constant="20" id="FEO-Lt-Lcz"/>
                             <constraint firstAttribute="trailing" secondItem="YiV-xl-Coj" secondAttribute="trailing" constant="20" id="FVy-LK-86a"/>
                             <constraint firstItem="YiV-xl-Coj" firstAttribute="top" secondItem="C4y-Om-Ol4" secondAttribute="bottom" constant="15" id="Gq1-f0-UnA"/>
@@ -125,9 +126,6 @@
                             <constraint firstAttribute="trailing" secondItem="C4y-Om-Ol4" secondAttribute="trailing" constant="20" id="rMw-DO-rSW"/>
                             <constraint firstItem="SIf-2w-giR" firstAttribute="top" secondItem="YiV-xl-Coj" secondAttribute="bottom" constant="10" id="ru2-k9-waL"/>
                             <constraint firstItem="2wb-kG-ySj" firstAttribute="top" secondItem="a7M-f1-rOM" secondAttribute="bottom" constant="8" id="uje-QM-5TB"/>
-                            <constraint firstItem="C4y-Om-Ol4" firstAttribute="top" secondItem="k8l-xk-cLX" secondAttribute="bottom" constant="50" id="zHv-Oa-D6E">
-                                <variation key="heightClass=compact" constant="5"/>
-                            </constraint>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Bow ties!" id="U7U-1I-8A1"/>
@@ -137,13 +135,13 @@
                         <outlet property="lastWornLabel" destination="2wb-kG-ySj" id="anw-ru-F9F"/>
                         <outlet property="nameLabel" destination="SIf-2w-giR" id="Su0-yU-ngU"/>
                         <outlet property="ratingLabel" destination="IV4-TH-3IP" id="g0F-OF-jY1"/>
-                        <outlet property="segmentedControl" destination="C4y-Om-Ol4" id="mVA-I9-TlU"/>
+                        <outlet property="segmentedControl" destination="C4y-Om-Ol4" id="6Xj-A8-RJw"/>
                         <outlet property="timesWornLabel" destination="a7M-f1-rOM" id="x4B-09-QwR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZtW-FK-Rcp" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-891" y="762.75"/>
+            <point key="canvasLocation" x="-891" y="773"/>
         </scene>
     </scenes>
 </document>

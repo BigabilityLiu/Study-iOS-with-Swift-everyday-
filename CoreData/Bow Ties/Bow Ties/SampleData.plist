@@ -5,8 +5,8 @@
 	<dict>
 		<key>name</key>
 		<string>Red Bow Tie</string>
-    <key>searchKey</key>
-    <string>R</string>
+		<key>searchKey</key>
+		<string>R</string>
 		<key>rating</key>
 		<real>3.5</real>
 		<key>tintColor</key>
@@ -30,8 +30,8 @@
 	<dict>
 		<key>name</key>
 		<string>Orange Bow Tie</string>
-    <key>searchKey</key>
-    <string>O</string>
+		<key>searchKey</key>
+		<string>O</string>
 		<key>rating</key>
 		<real>1.2</real>
 		<key>tintColor</key>
@@ -55,8 +55,8 @@
 	<dict>
 		<key>name</key>
 		<string>Yellow Bow Tie</string>
-    <key>searchKey</key>
-    <string>Y</string>
+		<key>searchKey</key>
+		<string>Y</string>
 		<key>rating</key>
 		<real>4.7</real>
 		<key>tintColor</key>
@@ -75,13 +75,13 @@
 		<key>timesWorn</key>
 		<integer>10</integer>
 		<key>isFavorite</key>
-		<true/>
+		<false/>
 	</dict>
 	<dict>
 		<key>name</key>
 		<string>Green Bow Tie</string>
-    <key>searchKey</key>
-    <string>G</string>
+		<key>searchKey</key>
+		<string>G</string>
 		<key>rating</key>
 		<real>3.2</real>
 		<key>tintColor</key>
@@ -105,8 +105,8 @@
 	<dict>
 		<key>name</key>
 		<string>Blue Bow Tie</string>
-    <key>searchKey</key>
-    <string>B</string>
+		<key>searchKey</key>
+		<string>B</string>
 		<key>rating</key>
 		<real>1.2</real>
 		<key>tintColor</key>
@@ -130,8 +130,8 @@
 	<dict>
 		<key>name</key>
 		<string>Indigo Bow Tie</string>
-    <key>searchKey</key>
-    <string>I</string>
+		<key>searchKey</key>
+		<string>I</string>
 		<key>rating</key>
 		<real>2.2</real>
 		<key>tintColor</key>
@@ -155,8 +155,8 @@
 	<dict>
 		<key>name</key>
 		<string>Violet Bow Tie</string>
-    <key>searchKey</key>
-    <string>V</string>
+		<key>searchKey</key>
+		<string>V</string>
 		<key>rating</key>
 		<real>4</real>
 		<key>tintColor</key>
